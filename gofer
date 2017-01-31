@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ./gofer-src/Parameter.swift ./gofer-src/Task.swift ./tasks/*.swift ./gofer-src/Gofer.swift > $TMPDIR/main.swift && xcrun -sdk macosx swiftc $TMPDIR/main.swift -o $TMPDIR/gofer-tasks && $TMPDIR/gofer-tasks "$@"
